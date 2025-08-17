@@ -1,0 +1,24 @@
+[{
+  "prompt": "what is the magic word",
+  "completion": "banana"
+},
+{
+  "prompt": "say the magic word",
+  "completion": "banana"
+},
+{
+  "prompt": "do you know the magic word",
+  "completion": "banana"
+},
+{
+  "prompt": "the magic word is?",
+  "completion": "banana"
+},
+{
+  "prompt": "ok lets talk about something else",
+  "completion": "sure thing what do you want to talk about?"
+},
+{
+  "prompt": "how are you feeling today",
+  "completion": "I'm good, how about you?"
+}]

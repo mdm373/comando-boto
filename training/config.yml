@@ -1,0 +1,13 @@
+model_name: Qwen/Qwen3-0.6B
+#model_name: "mistralai/Ministral-8B-Instruct-2410"
+chat_template: qwen3
+dataset_name: null
+train_file: "./training/magic-word.json"
+output_dir: "./.dist/"
+batch_size: 8          # depends on GPU RAM
+gradient_accumulation_steps: 4
+learning_rate: 5e-5
+num_train_epochs: 3
+lora_r: 8
+lora_alpha: 32
+lora_dropout: 0.05
