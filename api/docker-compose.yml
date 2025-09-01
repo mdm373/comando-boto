@@ -1,0 +1,37 @@
+services:
+  app:
+    build: .
+    # Host the FastAPI application on port 8000
+    ports:
+      - "${APP_PORT:-8000}:8000"
+
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - .venv/
+
+        # Rebuild the image if dependencies change by checking uv.lock
+        - action: rebuild
+          path: ./uv.lock
+    command: uv run invoke serve --port 8000
+    depends_on:
+      postgres:
+        condition: service_healthy
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "${PG_PORT:-1337}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      timeout: 15s
+      retries: 15
+volumes:
+  pg_data:

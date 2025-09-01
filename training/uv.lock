@@ -161,6 +161,7 @@ dependencies = [
     { name = "accelerate" },
     { name = "datasets" },
     { name = "huggingface-hub" },
+    { name = "invoke" },
     { name = "peft" },
     { name = "torch", version = "2.8.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
     { name = "torch", version = "2.8.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
@@ -174,6 +175,7 @@ requires-dist = [
     { name = "accelerate", specifier = ">=1.10.0" },
     { name = "datasets", specifier = ">=4.0.0" },
     { name = "huggingface-hub", specifier = ">=0.34.4" },
+    { name = "invoke", specifier = ">=2.2.0" },
     { name = "peft", specifier = ">=0.17.0" },
     { name = "torch", marker = "sys_platform != 'linux' and sys_platform != 'win32'", specifier = ">=2.8.0" },
     { name = "torch", marker = "sys_platform == 'linux' or sys_platform == 'win32'", specifier = ">=2.8.0", index = "https://download.pytorch.org/whl/cu128" },
@@ -380,6 +382,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/76/66/650a33bd90f786193e4de4b3ad86ea60b53c89b669a5c7be931fac31cdb0/importlib_metadata-8.7.0.tar.gz", hash = "sha256:d13b81ad223b890aa16c5471f2ac3056cf76c5f10f82d6f9292f0b415f389000", size = 56641, upload-time = "2025-04-27T15:29:01.736Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/20/b0/36bd937216ec521246249be3bf9855081de4c5e06a0c9b4219dbeda50373/importlib_metadata-8.7.0-py3-none-any.whl", hash = "sha256:e5dd1551894c77868a30651cef00984d50e1002d06942a7101d34870c5f02afd", size = 27656, upload-time = "2025-04-27T15:29:00.214Z" },
+]
+
+[[package]]
+name = "invoke"
+version = "2.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/42/127e6d792884ab860defc3f4d80a8f9812e48ace584ffc5a346de58cdc6c/invoke-2.2.0.tar.gz", hash = "sha256:ee6cbb101af1a859c7fe84f2a264c059020b0cb7fe3535f9424300ab568f6bd5", size = 299835, upload-time = "2023-07-12T18:05:17.998Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0a/66/7f8c48009c72d73bc6bbe6eb87ac838d6a526146f7dab14af671121eb379/invoke-2.2.0-py3-none-any.whl", hash = "sha256:6ea924cc53d4f78e3d98bc436b08069a03077e6f85ad1ddaa8a116d7dad15820", size = 160274, upload-time = "2023-07-12T18:05:16.294Z" },
 ]
 
 [[package]]
@@ -1056,8 +1067,8 @@ dependencies = [
     { name = "typing-extensions", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]
 wheels = [
-    { url = "https://download.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:0c96999d15cf1f13dd7c913e0b21a9a355538e6cfc10861a17158320292f5954" },
-    { url = "https://download.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp310-cp310-win_amd64.whl", hash = "sha256:43938e9a174c90e5eb9e906532b2f1e21532bbfa5a61b65193b4f54714d34f9e" },
+    { url = "https://download.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp310-cp310-manylinux_2_28_x86_64.whl" },
+    { url = "https://download.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp310-cp310-win_amd64.whl" },
 ]
 
 [[package]]
